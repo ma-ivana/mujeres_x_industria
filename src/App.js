@@ -1,22 +1,16 @@
 import React from 'react';
 import Nav from './components/Nav';
-import Hero from './components/Hero';
-import styled from 'styled-components';
 import Slider from './components/Slider';
-
-const HeroContainer = styled.div`
-  padding: 25px;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-
-`
+import Banner from './components/Banner';
+import News from './components/News';
 
 const App = () => {
   return (
     <div className="App">
       <Nav/>
       <Slider/>
+      <Banner/>
+      
     </div>
   );
 }

@@ -6,7 +6,8 @@ import image2 from '../img/img2_380_250.png';
 import image3 from '../img/img3_380_250.png';
 import image4 from '../img/img4_380_250.png';
 import image5 from '../img/img5_380_250.png';
-
+import { ArrowIosBack } from '@styled-icons/evaicons-solid';
+import { ArrowIosForward } from '@styled-icons/evaicons-solid';
 
 const StyledSlider = styled.div`
   width: 100%;
@@ -17,10 +18,11 @@ const StyledSlider = styled.div`
   align-items: center;
   position: relative;
   overflow: hidden;
+  margin: 0;
 
   .slide {
     min-width: 100%;
-    height: 80%;
+    height: 90%;
     transition: 0.5s;
     overflow: hidden;
     display: flex;
@@ -40,6 +42,9 @@ const StyledSlider = styled.div`
       margin-right: 10%;
       padding: 5% 10% 5% 5%;
       text-align: center;
+      font-family: 'Arima Madurai', cursive;
+      color: #900d4f;
+      font-size: 24px;
     }     
   }
 `
@@ -52,6 +57,7 @@ const ButtonLeft = styled.button`
   height: 80%;
   background: none;
   border: none;
+  outline: none;
 `
 
 const ButtonRight = styled.button`
@@ -63,6 +69,19 @@ const ButtonRight = styled.button`
   height: 80%;
   background: none;
   border: none;
+  outline: none;
+`
+
+const ArrowLeft = styled(ArrowIosBack)`
+  height: 50%;
+  width: auto;
+  color: #900d4f;
+`
+
+const ArrowRight = styled(ArrowIosForward)`
+  height: 50%;
+  width: auto;
+  color: #900d4f;
 `
 
 const Slider = () => {
@@ -96,8 +115,8 @@ const Slider = () => {
         )
       })}
 
-      <ButtonLeft id="goLeft" onClick={goLeft}>left</ButtonLeft>
-      <ButtonRight id="goRight" onClick={goRight}>right</ButtonRight>
+      <ButtonLeft id="goLeft" onClick={goLeft}><ArrowLeft/></ButtonLeft>
+      <ButtonRight id="goRight" onClick={goRight}><ArrowRight/></ButtonRight>
     </StyledSlider>
   );
 }
