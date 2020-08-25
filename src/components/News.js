@@ -1,12 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import Title from './Title';
+import { colors } from '../styles/globalCss';
 
 const News = () => {
   return (
-    <h2>NEWS</h2>
-    
+    <Title 
+      titleColor={colors.borravino}
+      titleContent="NEWS"
+      barColor={colors.gris_mas_claro}
+    />
   )
-
 }
 
 export default News;

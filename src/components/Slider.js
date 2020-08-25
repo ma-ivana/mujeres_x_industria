@@ -109,7 +109,7 @@ const Slider = () => {
             {item}
             </div>
             <div className="text_container">
-              <p>Invertir en una mujer tiene gran impacto social porque la mujer multiplica oportunidades</p>
+              <p>Invertir en el desarrollo de una mujer tiene gran impacto social porque la mujer multiplica oportunidades</p>
             </div>
           </div>
         )
