@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../img/mxi_logo_fondo_transp.png';
 import styled from 'styled-components';
+import { colors } from '../styles/globalCss';
 
 const NavBar = styled.nav`
   color: white;
@@ -28,7 +29,12 @@ const NavBar = styled.nav`
         li {
         list-style: none;
         display: inline-block;
-      }}
+        }
+          li:hover{
+            text-shadow: 1px 1px ${colors.rosa_muy_claro};
+            font-weight: bolder;
+          }
+        }
     }
 `
 

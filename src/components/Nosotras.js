@@ -45,7 +45,8 @@ const Nosotras = () => {
     <MainContainer>
       <TextContainer>
         <div>
-          <Title 
+          <Title
+            titleAlignment={mixins.column_flex_left} 
             titleColor={colors.blanco}
             titleContent="NOSOTRAS"
             barColor={colors.rosa_fuerte}

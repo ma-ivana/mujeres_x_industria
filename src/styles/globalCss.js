@@ -2,6 +2,8 @@ export const colors = {
   borravino: "#900d4f",
   borravino_claro: "#A53A71",
   rosa_fuerte: "#eb6c8e",
+  rosa_claro: "#fc92af",
+  rosa_muy_claro: "#fcf2f5",
   gris_claro: "#666B72",
   gris_mas_claro: "#A6A6A6",
   gris_oscuro: "#293039",
@@ -9,13 +11,15 @@ export const colors = {
 }
 
 export const fonts = {
-  title: "'Oswald', sans-serif",
+  title: "'Lato', sans-serif",
   banner: "'Belleza', sans-serif",
-  slider: "'Arima Madurai', cursive",
+  slider: "'Belleza', sans-serif",
   nav: "'Lato', sans-serif",
 }
 
 export const mixins = {
   usual_flex: "display: flex; justify-content: center; align-items: center",
-  between_flex: "display: flex; justify-content: space-between; align-items: center"
+  between_flex: "display: flex; justify-content: space-between; align-items: center",
+  column_flex_center: "display: flex; flex-direction: column; align-items: center;",
+  column_flex_left: "display: flex; flex-direction: column; align-items: flex-start;"
 }

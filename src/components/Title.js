@@ -5,9 +5,7 @@ import { fonts } from '../styles/globalCss';
 const TitleContainer = styled.div`
   width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  ${props => props.titleAlignment};
 `
 
 const TitleLine = styled.h2`
@@ -26,9 +24,9 @@ const HorizontalBar = styled.div`
   padding-top: 0;
 `
 
-const Title = ({ titleContent, titleColor, barColor }) => {
+const Title = ({ titleAlignment, titleContent, titleColor, barColor }) => {
   return (
-    <TitleContainer>
+    <TitleContainer titleAlignment={titleAlignment}>
       <div>
         <TitleLine 
           titleColor={titleColor}>
