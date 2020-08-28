@@ -2,10 +2,14 @@ import React from 'react';
 import logo from '../img/mxi_logo_fondo_transp.png';
 import styled from 'styled-components';
 import { colors } from '../styles/globalCss';
+import { Link } from 'react-router-dom';
 
 const NavBar = styled.nav`
+  width: 100%;
+  margin: 0;
   color: white;
   font-family: 'Lato', sans-serif;
+  font-size: 21px;
   font-weight: 700;
   height: 80px;
   background-color: #900d4f;
@@ -29,6 +33,11 @@ const NavBar = styled.nav`
         li {
         list-style: none;
         display: inline-block;
+        color: white;
+          a {
+            text-decoration: none;
+            color: white;
+          }
         }
           li:hover{
             text-shadow: 1px 1px ${colors.rosa_muy_claro};
@@ -46,12 +55,12 @@ const Nav = () => {
       </div>
       <div className="nav_menu">
         <ul>
-          <li>Home</li>
-          <li>Nosotras</li>
-          <li>Ecosistema</li>
-          <li>News</li>
-          <li>Eventos</li>
-          <li>Contacto</li>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/nosotras">Nosotras</Link></li>
+          <li><Link to="/ecosistema">Ecosistema</Link></li>
+          <li><Link to="/news">News</Link></li>
+          <li><Link to="/eventos">Eventos</Link></li>
+          <li><Link to="/contacto">Contacto</Link></li>
         </ul>
       </div>
     </NavBar>

@@ -5,9 +5,10 @@ import img_central from '../img/img_400_x_370.png';
 import Title from './Title';
 
 const MainContainer = styled.section`
-  margin: 5%;
-  width: 90%;
+  margin: 120px 3%;
+  width: 94%;
   height: 420px;
+  box-sizing: border-box;
   ${mixins.between_flex};
   background-color: ${colors.borravino};
 `

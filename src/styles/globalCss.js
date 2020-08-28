@@ -15,11 +15,13 @@ export const fonts = {
   banner: "'Belleza', sans-serif",
   slider: "'Belleza', sans-serif",
   nav: "'Lato', sans-serif",
+  text: "'Belleza', sans-serif",
 }
 
 export const mixins = {
   usual_flex: "display: flex; justify-content: center; align-items: center",
   between_flex: "display: flex; justify-content: space-between; align-items: center",
-  column_flex_center: "display: flex; flex-direction: column; align-items: center;",
+  column_flex_center: "display: flex; flex-direction: column; align-items: center",
+  column_flex_center_center: "display: flex; flex-direction: column; align-items: center; justify-content: center",
   column_flex_left: "display: flex; flex-direction: column; align-items: flex-start;"
 }

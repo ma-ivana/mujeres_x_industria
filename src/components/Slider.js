@@ -8,6 +8,7 @@ import image4 from '../img/img4_380_250.png';
 import image5 from '../img/img5_380_250.png';
 import { ArrowIosBack } from '@styled-icons/evaicons-solid';
 import { ArrowIosForward } from '@styled-icons/evaicons-solid';
+import { fonts } from '../styles/globalCss';
 
 const StyledSlider = styled.div`
   width: 100%;
@@ -42,7 +43,7 @@ const StyledSlider = styled.div`
       margin-right: 10%;
       padding: 5% 10% 5% 5%;
       text-align: center;
-      font-family: 'Arima Madurai', cursive;
+      font-family: ${fonts.title};
       color: #900d4f;
       font-size: 24px;
     }     
