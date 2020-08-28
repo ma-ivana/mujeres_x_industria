@@ -20,8 +20,8 @@ const CardTitle = styled.div`
 
 const CardIcon = styled.div`
   color: white;
-  width: 70px;
-  height: 70px;
+  width: 55px;
+  height: 55px;
   ${mixins.usual_flex};
   overflow: hidden;
     img {
