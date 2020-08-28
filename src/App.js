@@ -16,6 +16,8 @@ const App = () => {
       <Slider/> */}
       <Nav/>
 
+      <Route exact path="/" component={Slider}></Route>
+      <Route exact path="/" component={Banner}></Route>
       <Route exact path="/home" component={Slider}></Route>
       <Route exact path="/home" component={Banner}></Route>
       <Route exact path="/nosotras" component={Nosotras}></Route>
