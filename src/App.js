@@ -8,6 +8,7 @@ import Banner from './components/Banner';
 import Nosotras from './components/Nosotras';
 import Mision from './components/Mision';
 import Footer from './components/Footer';
+import Contacto from './components/Contacto';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Route exact path="/home" component={Banner}></Route>
       <Route exact path="/nosotras" component={Nosotras}></Route>
       <Route exact path="/nosotras" component={Mision}></Route>
+      <Route exact path="/contacto" component={Contacto}></Route>
 
       <Footer/>
     </Router>

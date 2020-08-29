@@ -25,3 +25,7 @@ export const mixins = {
   column_flex_center_center: "display: flex; flex-direction: column; align-items: center; justify-content: center",
   column_flex_left: "display: flex; flex-direction: column; align-items: flex-start;"
 }
+
+export const shadows = {
+  card_shadow: "box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+}
