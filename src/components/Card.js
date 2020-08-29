@@ -36,7 +36,7 @@ const CardText = styled.div`
   box-sizing: border-box;
   padding: 25px 30px 25px;
     p {
-      text-align: justify;
+      text-align: center;
     }
 `
 
