@@ -1,4 +1,4 @@
-Hecho con [Create React App](https://github.com/facebook/create-react-app).
+Hecho con ♥ y [Create React App](https://github.com/facebook/create-react-app).
 
 ## Mujeres por la industria
 
