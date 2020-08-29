@@ -7,6 +7,7 @@ import Banner from './components/Banner';
 // import News from './components/News';
 import Nosotras from './components/Nosotras';
 import Mision from './components/Mision';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
       <Route exact path="/nosotras" component={Nosotras}></Route>
       <Route exact path="/nosotras" component={Mision}></Route>
 
+      <Footer/>
     </Router>
   );
 }

@@ -39,28 +39,28 @@ const Mision = () => {
             iconName={conectar}
             iconColor={colors.blanco}
             cardTitle="CONECTAR"
-            cardContent="Añadir un poco de texto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto texto"
+            cardContent="Desde hace muchos años estamos en el mundo corporativo, gremial, sector público, universidad e industrial. Consideramos que como conectoras podemos impulsar a muchas mujeres con potencial."
             />
           <Card
             cardColor={colors.borravino_claro}
             iconName={articular}
             iconColor={colors.blanco}
             cardTitle="ARTICULAR"
-            cardContent="Añadir un poco de texto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto texto"
+            cardContent="Alineados con el ODS17 creemos en las alianzas para lograr resultados y trabajamos con todo el ecosistema para generar real impacto social."
             />
           <Card 
             cardColor={colors.gris_claro}
             iconName={visibilizar}
             iconColor={colors.blanco}
             cardTitle="VISIBILIZAR"
-            cardContent="Añadir un poco de texto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto texto"
+            cardContent="Tan importante como la gestión de ellas mismas, muchas mujeres realizan acciones increíbles pero pocos saben, incentivamos a mejorar su comunicación y autopromoción."
             />
           <Card 
             cardColor={colors.gris_oscuro}
             iconName={acompañar}
             iconColor={colors.blanco}
             cardTitle="ACOMPAÑAR"
-            cardContent="Añadir un poco de texto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto textotexto texto texto texto texto texto"
+            cardContent="Escuchándolas, monitoreándolos e impulsándolas lograremos que más mujeres multipliquen oportunidades en diferentes industrias, espacios de poder y áreas productivas."
             />
         </CardContainer>
       </MisionContainer>
