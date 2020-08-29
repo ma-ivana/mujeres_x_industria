@@ -54,7 +54,7 @@ const Nosotras = () => {
           ></Title>
         </div>
         <div>
-          <Text>Quienes nos ocupamos de empoderar mujeres entendemos la urgencia de la igualdad de oportunidades en todos los ámbitos. Hay mujeres que buscan un empleo digno, emprendedoras que desean ser parte de los proveedores de las industrias a nivel regional, empleadas que esperan una oportunidad para crecer en puestos de trabajo como entrepreneurs que aspiran a ocupar puestos de decisión.</Text>
+          <Text>Quienes nos ocupamos de empoderar mujeres entendemos la urgencia de la igualdad de oportunidades en todos los ámbitos. Hay mujeres que buscan un empleo digno, emprendedoras que desean ser parte de los proveedores de las industrias a nivel regional, empleadas que esperan una oportunidad para crecer en puestos de trabajo como intrapreneurs que aspiran a ocupar puestos de decisión.</Text>
           <Text>Somos lo que soñamos ser y buscamos una oportunidad para todas ellas.</Text>
         </div>
       </TextContainer>
