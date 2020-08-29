@@ -7,6 +7,11 @@ const CardTotal = styled.div`
   height: 400px;
   background-color: ${props => props.cardColor};
   ${mixins.column_flex_center_center};
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+    :hover {
+      transform: scale(1.1);
+    }
 `
 
 const CardTitle = styled.div`
