@@ -26,7 +26,6 @@ const App = () => {
         <Route exact path="/nosotras" component={Nosotras}></Route>
         <Route exact path="/nosotras" component={Mision}></Route>
         <Route exact path="/contacto" component={Contacto}></Route>
-        <Route exact path="/formResponse" render={props => <FormResponse {...props }/>}></Route>
       </Switch>
       <Footer/>
     </Router>
