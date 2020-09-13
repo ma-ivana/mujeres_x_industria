@@ -25,4 +25,6 @@ $asunto = 'Mensaje de mi sitio web';
 if (mail($para, $asunto, utf8_decode($mensaje), $header))
 echo "<script type='text/javascript'>alert('Tu mensaje ha sido enviado exitosamente');</script>";
 echo "<script type='text/javascript'>window.location.href='index.html';</script>";
+
+<script type="text/javascript" src="./app.js" ></script>
 ?>

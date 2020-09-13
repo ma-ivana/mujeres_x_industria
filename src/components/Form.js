@@ -1,6 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { colors, fonts, shadows } from '../styles/globalCss';
+import emailjs from 'emailjs-com';
+import FormResponse from './FormResponse';
+import { Link, Redirect } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const FormContainer = styled.form`
   width: 580px;
@@ -67,23 +73,83 @@ const TextArea = styled.textarea`
 `
 
 const Form = () => {
+
+  const [state, setState] = useState({
+    "nombre": "",
+    "apellido": "",
+    "email": "",
+    "instagram": "",
+    "twitter": "",
+    "linkedin": "",
+    "facebook": "",
+    "sitioweb": "",
+    "mensaje": ""
+  });
+
+  const [formState, setFormState] = useState("");
+
+  const [ifFormSent, setIfFormSent] = useState(false);
+
+    const handleChange = e => {
+    console.log("name", e.target.name)
+    console.log("value", e.target.value)
+    setState({...state, [e.target.name]: e.target.value});
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setIfFormSent(true);
+    emailjs.sendForm('contact_service', 'contact_form', e.target, 'user_vNgTxJCIckvAXdDUjFXsB')
+      .then((result) => {
+          console.log(result.text);
+          setFormState("success");
+          alert('Formulario correctamente enviado.', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            }); 
+      }, (error) => {
+          console.log(error.text);
+          setFormState("error");
+          alert('No se pudo enviar el formulario.', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });          
+      });
+      
+  };
+  
+ 
   return (
-    <FormContainer action="../formPHP.php" method="post">
+    <>
+    <FormContainer>
       <Fields>
-        <input type="text" required placeholder="Nombre*" name="nombre"/>
-        <input type="text" required placeholder="Apellido*" name="apellido"/>
-        <input type="email" required placeholder="Correo electrónico*" name="email"/>
-        <input type="url" placeholder="Instagram" name="instagram"/>
-        <input type="url" placeholder="Twitter" name="twitter"/>
-        <input type="url" placeholder="Linkedin" name="linkedin"/>
-        <input type="url" placeholder="Facebook" name="facebook"/>
-        <input type="url" placeholder="Sitio web" name="sitioweb"/>
-        <TextArea type="textarea" cols="30" rows="10" placeholder="Mensaje" name="mensaje"></TextArea>
+        <input type="text" value={state.nombre} required placeholder="Nombre*" name="nombre" onChange={handleChange}/>
+        <input type="text" value={state.apellido} required placeholder="Apellido*" name="apellido" onChange={handleChange}/>
+        <input type="email" value={state.email} required placeholder="Correo electrónico*" name="email" onChange={handleChange}/>
+        <input type="text" value={state.instagram} placeholder="Instagram" name="instagram" onChange={handleChange}/>
+        <input type="text" value={state.twitter} placeholder="Twitter" name="twitter" onChange={handleChange}/>
+        <input type="text" value={state.linkedin} placeholder="Linkedin" name="linkedin" onChange={handleChange}/>
+        <input type="text" value={state.facebook} placeholder="Facebook" name="facebook" onChange={handleChange}/>
+        <input type="text" value={state.sitioweb} placeholder="Sitio web" name="sitioweb" onChange={handleChange}/>
+        <TextArea type="textarea" value={state.mensaje} cols="30" rows="10" placeholder="Mensaje" name="mensaje" onChange={handleChange}></TextArea>
       </Fields>
       <Submit>
-        <input type="submit" value="Enviar"/>
+        <input type="submit" onSubmit={handleSubmit} value="Enviar"/>
       </Submit>
     </FormContainer>
+    { ifFormSent ? <Redirect to="/formResponse"><FormResponse status={formState}/></Redirect>                    
+                 : ""}
+    </>
 
   )
 }

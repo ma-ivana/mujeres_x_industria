@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import img3 from '../img/img3_640_x_540.png';
 import { colors, mixins } from '../styles/globalCss';
-import Title from '../components/Title';
-import Form from '../components/Form';
+import Title from './Title';
+import Form from './Form';
 
 const ContactoContainer = styled.div`
   margin: 80px 3%;
