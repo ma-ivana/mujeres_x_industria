@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { mixins, colors, fonts } from '../styles/globalCss';
 import img_central from '../img/img_400_x_370.png';
 import Title from './Title';
+import Mision from './Mision';
+import Ejes from './Ejes';
 
 const MainContainer = styled.section`
   margin: 120px 3%;
@@ -43,25 +45,31 @@ const ImageContainer = styled.div`
 
 const Nosotras = () => {
   return (
-    <MainContainer>
-      <TextContainer>
-        <div>
-          <Title
-            titleAlignment={mixins.column_flex_left} 
-            titleColor={colors.blanco}
-            titleContent="NOSOTRAS"
-            barColor={colors.rosa_fuerte}
-          ></Title>
-        </div>
-        <div>
-          <Text>Quienes nos ocupamos de empoderar mujeres entendemos la urgencia de la igualdad de oportunidades en todos los ámbitos. Hay mujeres que buscan un empleo digno, emprendedoras que desean ser parte de los proveedores de las industrias a nivel regional, empleadas que esperan una oportunidad para crecer en puestos de trabajo como intrapreneurs que aspiran a ocupar puestos de decisión.</Text>
-          <Text>Somos lo que soñamos ser y buscamos una oportunidad para todas ellas.</Text>
-        </div>
-      </TextContainer>
-      <ImageContainer>
-        <img src={img_central} alt="Mujer con un fondo de cerezos en flor"/>
-      </ImageContainer>
-    </MainContainer>
+    <>
+      <MainContainer>
+        <TextContainer>
+          <div>
+            <Title
+              titleAlignment={mixins.column_flex_left} 
+              titleColor={colors.blanco}
+              titleContent="NOSOTRAS"
+              barColor={colors.rosa_fuerte}
+            ></Title>
+          </div>
+          <div>
+            <Text>Quienes nos ocupamos de empoderar mujeres entendemos la urgencia de la igualdad de oportunidades en todos los ámbitos. Hay mujeres que buscan un empleo digno, emprendedoras que desean ser parte de los proveedores de las industrias a nivel regional, empleadas que esperan una oportunidad para crecer en puestos de trabajo como intrapreneurs que aspiran a ocupar puestos de decisión.</Text>
+            <Text>Somos lo que soñamos ser y buscamos una oportunidad para todas ellas.</Text>
+          </div>
+        </TextContainer>
+        <ImageContainer>
+          <img src={img_central} alt="Mujer con un fondo de cerezos en flor"/>
+        </ImageContainer>
+      </MainContainer>
+
+      <Mision/>
+
+      <Ejes/>
+    </>
   )
 
 }
