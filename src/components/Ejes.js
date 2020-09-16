@@ -3,6 +3,8 @@ import Card from '../components/Card';
 import {colors, mixins } from '../styles/globalCss';
 import styled from 'styled-components';
 import Title from '../components/Title';
+import CardCircular from './CardCircular';
+import icono from '../img/icono_mas_40_x_40.png';
 
 
 const MisionContainer = styled.div`
@@ -31,34 +33,27 @@ const Ejes = () => {
           barColor={colors.gris_claro}
           />          
         <CardContainer>
-          {/* <Card
+          <CardCircular
             cardColor={colors.borravino}
-            iconName={conectar}
+            iconName={icono}
             iconColor={colors.blanco}
-            cardTitle="CONECTAR"
-            cardContent="Desde hace muchos años estamos en el mundo corporativo, gremial, sector público, universidad e industrial. Consideramos que como conectoras podemos impulsar a muchas mujeres con potencial."
+            cardTitle="MUJERES EN PRODUCCIÓN"
+            cardContent="Más mujeres en todos los espacios productivos"
             />
-          <Card
+          <CardCircular
             cardColor={colors.borravino_claro}
-            iconName={articular}
+            iconName={icono}
             iconColor={colors.blanco}
-            cardTitle="ARTICULAR"
-            cardContent="Alineados con el ODS17 creemos en las alianzas para lograr resultados y trabajamos con todo el ecosistema para generar real impacto social."
+            cardTitle="MUJERES PROVEEDORAS"
+            cardContent="Más mujeres emprendedoras como proveedoras de la industria"
             />
-          <Card 
+          <CardCircular 
             cardColor={colors.gris_claro}
-            iconName={visibilizar}
+            iconName={icono}
             iconColor={colors.blanco}
-            cardTitle="VISIBILIZAR"
-            cardContent="Tan importante como la gestión de ellas mismas, muchas mujeres realizan acciones increíbles pero pocos saben, incentivamos a mejorar su comunicación y autopromoción."
+            cardTitle="MUJERES EN DECISIÓN"
+            cardContent="Más mujeres en poder de decisión en todas las áreas"
             />
-          <Card 
-            cardColor={colors.gris_oscuro}
-            iconName={acompañar}
-            iconColor={colors.blanco}
-            cardTitle="ACOMPAÑAR"
-            cardContent="Escuchándolas, monitoreándolos e impulsándolas lograremos que más mujeres multipliquen oportunidades en diferentes industrias, espacios de poder y áreas productivas."
-            /> */}
         </CardContainer>
       </MisionContainer>
     </>
