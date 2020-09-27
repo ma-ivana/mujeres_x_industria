@@ -58,7 +58,7 @@ const CardCircular = ({ cardColor, iconName, iconColor, cardTitle, cardContent }
   return (
     <CardTotal cardColor={cardColor}>
       <CardIcon iconColor={iconColor}>
-        <img src={iconName}/>
+        <img alt={iconName} src={iconName}/>
       </CardIcon>
       <CardTitle> {cardTitle}
       </CardTitle>

@@ -32,7 +32,7 @@ const Text = styled.p`
 `
 
 const ImageContainer = styled.div`
-  width: 40%;
+  width: 35%;
   height: 420px;
   overflow: hidden;
   display: flex;

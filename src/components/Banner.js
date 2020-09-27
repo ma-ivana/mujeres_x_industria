@@ -1,16 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
+import {colors } from '../styles/globalCss';
 
 const StyledBanner = styled.div`
-  background-color: #293039;
+  background-color: ${colors.blanco};
   font-family: 'Belleza', sans-serif;
   font-size: 32px;
-  color: white;
+  color: ${colors.borravino};
   width: 100%;
   height: 150px;
   display: flex;
+  text-align: center;
+  align-items: center;
   justify-content: center;
-  align-items: center;  
+  box-sizing: border-box; 
+
+  @media (max-width: 430px) {
+    font-size: 23px;
+    width: 100%;
+    padding: 15px 5px;
+  } 
 `
 
 const Banner = () => {

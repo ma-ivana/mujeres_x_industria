@@ -52,7 +52,7 @@ const Contacto = () => {
   return (
     <ContactoContainer>
       <LeftDiv>
-        <img src={ img3 }/>
+        <img alt="Imagen de mujeres" src={ img3 }/>
       </LeftDiv>
       <RightDiv>
         <TitleContainer>

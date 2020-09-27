@@ -14,6 +14,26 @@ const FooterContainer = styled.div`
   ${mixins.usual_flex};
   font-family: ${fonts.text};
   color: ${colors.borravino};
+
+  @media (max-width: 768px) and (min-width: 401px) {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: ${fonts.text};
+    color: ${colors.borravino};
+  }
+
+  @media (max-width: 400px) {
+    margin-top: 15px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-family: ${fonts.text};
+    color: ${colors.borravino};
+  }
 `
 const Social = styled.div`
   width: 230px;
@@ -26,6 +46,7 @@ const Social = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      
 
       p {
         margin: 10px 0 0 0;
@@ -38,6 +59,61 @@ const Social = styled.div`
     :hover {
       transform: scale(1.2);
     }
+
+  @media (max-width: 768px) and (min-width: 431px) {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    
+    a {
+      text-decoration: none;
+      color: ${colors.borravino};
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 15px 0;
+      
+
+      p {
+        /* margin: 10px 0 0 0; */
+        padding: 0;
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+
+    :hover {
+      transform: scale(1.2);
+    }
+  }
+
+    @media (max-width: 430px) {
+      width: 70%;
+      display: flex;
+    /* flex-direction: column; */
+    
+    a {
+      text-decoration: none;
+      color: ${colors.borravino};
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+      
+
+      p {
+        /* margin: 10px 0 0 0; */
+        padding: 0;
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+
+    :hover {
+      transform: scale(1.2);
+    }
+  }
 `
 
 const Footer = () => {
@@ -47,31 +123,31 @@ const Footer = () => {
       <FooterContainer>
         <Social>
           <a href="mailto:mujeresporlaindustria@gmail.com" target="_blank">
-            <img src={ mail }/>
+            <img alt="Ícono de mail" src={ mail }/>
             <p>mujeresporlaindustria@gmail.com</p>
           </a>
         </Social>
         <Social>
           <a href="https://emprenderenfemenino.com.ar/" target="_blank">
-            <img src={ web }/>
+            <img alt="Ícono de sitio web" src={ web }/>
             <p>Emprender en Femenino</p>
           </a>
         </Social>
         <Social>
           <a href="https://www.instagram.com/mujeresxindustria/" target="_blank">
-            <img src={ instagram }/>
+            <img alt="Ícono de Instagram" src={ instagram }/>
             <p>@mujeresxindustria</p>
           </a>
         </Social>
         <Social>
           <a href="https://twitter.com/EmprendeFem" target="_blank">
-            <img src={ twitter }/>
+            <img alt="Ícono de Twitter" src={ twitter }/>
             <p>@EmprendeFem</p>
           </a>
         </Social>
         <Social>
           <a href="https://www.linkedin.com/groups/12139183/" target="_blank">
-            <img src={ linkedin }/>
+            <img alt="Ícono de LinkedIn" src={ linkedin }/>
             <p>Grupo de Mujeres por la Industria</p>
           </a>
         </Social>

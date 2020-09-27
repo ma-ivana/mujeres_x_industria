@@ -8,7 +8,9 @@ import image4 from '../img/img4_380_250.png';
 import image5 from '../img/img5_380_250.png';
 import { ArrowIosBack } from '@styled-icons/evaicons-solid';
 import { ArrowIosForward } from '@styled-icons/evaicons-solid';
-import { fonts } from '../styles/globalCss';
+import { colors, fonts, shadows, mixins } from '../styles/globalCss';
+import Banner from '../components/Banner';
+import ButtonLink from './ButtonLink';
 
 const StyledSlider = styled.div`
   width: 100%;
@@ -20,7 +22,8 @@ const StyledSlider = styled.div`
   position: relative;
   overflow: hidden;
   margin: 0;
-
+  ${shadows.card_shadow};
+  
   .slide {
     min-width: 100%;
     height: 90%;
@@ -29,7 +32,7 @@ const StyledSlider = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     .img_container {
       width: 50%;
       height: auto;
@@ -44,11 +47,103 @@ const StyledSlider = styled.div`
       padding: 5% 10% 5% 5%;
       text-align: center;
       font-family: ${fonts.title};
-      color: #900d4f;
+      color: ${colors.borravino};
       font-size: 24px;
     }     
   }
+
+    @media screen and (max-width: 768px) and (min-width: 401px){
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    ${shadows.card_shadow};
+    
+    .slide {
+      /* min-width: 100%; */
+      height: 90%;
+      transition: 0.5s;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .img_container {
+        display: none;
+        width: 0;
+        height: auto;
+        margin-left: 0;
+        img {
+          min-width: 0;
+        }
+      } 
+      .text_container {
+        width: 70%;
+        margin-right: 0; 
+        padding: 0;
+        text-align: center;
+        font-family: ${fonts.title};
+        color: ${colors.borravino};
+        font-size: 18px;
+      }     
+    }
+    }
+
+    @media screen and (max-width: 400px) {
+    width: 100%;
+    height: 400px;
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    ${shadows.card_shadow};
+    
+    .slide {
+      /* min-width: 100%; */
+      height: 90%;
+      transition: 0.5s;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .img_container {
+        display: none;
+        width: 0;
+        height: auto;
+        margin-left: 0;
+        img {
+          min-width: 0;
+        }
+      } 
+      .text_container {
+        width: 70%;
+        margin-right: 0; 
+        padding: 0;
+        text-align: center;
+        font-family: ${fonts.title};
+        color: ${colors.borravino};
+        font-size: 18px;
+      }     
+    }
+    }
+  
+  `
+
+const ButtonContainer = styled.div`
+  ${mixins.usual_flex};
 `
+
 const ButtonLeft = styled.button`
   position: absolute;
   top: 50%;
@@ -59,6 +154,11 @@ const ButtonLeft = styled.button`
   background: none;
   border: none;
   outline: none;
+
+  @media screen and (max-width: 450px) {
+    width: 75px;
+    height: 120px;
+  }
 `
 
 const ButtonRight = styled.button`
@@ -71,6 +171,11 @@ const ButtonRight = styled.button`
   background: none;
   border: none;
   outline: none;
+
+  @media screen and (max-width: 450px) {
+    width: 75px;
+    height: 120px;
+  }
 `
 
 const ArrowLeft = styled(ArrowIosBack)`
@@ -102,6 +207,7 @@ const Slider = () => {
   }
 
   return (
+    <>
     <StyledSlider>
       {sliderArr.map((item, index) => {
         return (
@@ -111,7 +217,13 @@ const Slider = () => {
             </div>
             <div className="text_container">
               <p>Invertir en el desarrollo de una mujer tiene gran impacto social porque la mujer multiplica oportunidades</p>
+              <ButtonContainer>
+                <ButtonLink buttonText={"Quiero ayuda"} buttonwidth={"110px"} buttonRoute={"/contacto"}>
+                </ButtonLink>
+                <ButtonLink buttonText={"Quiero ayudar"} buttonwidth={"110px"} buttonRoute={"/contacto"}/>
+              </ButtonContainer>
             </div>
+            
           </div>
         )
       })}
@@ -119,6 +231,8 @@ const Slider = () => {
       <ButtonLeft id="goLeft" onClick={goLeft}><ArrowLeft/></ButtonLeft>
       <ButtonRight id="goRight" onClick={goRight}><ArrowRight/></ButtonRight>
     </StyledSlider>
+    <Banner/>
+    </>
   );
 }
 

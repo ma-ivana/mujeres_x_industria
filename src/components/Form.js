@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { colors, fonts, shadows } from '../styles/globalCss';
+import { colors, fonts } from '../styles/globalCss';
 import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ButtonSubmit from './ButtonSubmit';
 
 
 const FormContainer = styled.form`
@@ -26,34 +27,34 @@ const Fields = styled.div`
       border: none;
       box-sizing: border-box;
       padding: 5px;
-      border-bottom: 1px solid ${colors.borravino};
+      border-bottom: 1px solid ${colors.gris_oscuro};
       font-family: ${fonts.nav};
       font-size: 14px;
         :focus {
           border: none;
           outline: none;
-          border-bottom: 2px solid ${colors.borravino};
+          border-bottom: 3px solid ${colors.gris_mas_claro};
         }     
     }
 `
-const Submit = styled.div`
-  width: 80px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+// const Submit = styled.div`
+//   width: 80px;
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: flex-end;
 
-    input {
-      width: 80px;
-      height: 30px;
-      border-radius: 5%;
-      border: none;
-      background-color: ${colors.borravino};
-      color: white;
-      font-family: ${fonts.nav};
-      font-weight: bold;
-      ${shadows.card_shadow};
-    }
-`
+//     input {
+//       width: 80px;
+//       height: 30px;
+//       border-radius: 5%;
+//       border: none;
+//       background-color: ${colors.borravino};
+//       color: white;
+//       font-family: ${fonts.nav};
+//       font-weight: bold;
+//       ${shadows.card_shadow};
+//     }
+// `
 const TextArea = styled.textarea`
   width: 100%;
   height: auto;
@@ -66,7 +67,7 @@ const TextArea = styled.textarea`
       :focus {
       border: none;
       outline: none;
-      border-bottom: 2px solid ${colors.borravino};
+      border-bottom: 3px solid ${colors.gris_mas_claro};
     } 
 `
 
@@ -165,9 +166,9 @@ const Form = () => {
         <input type="text" value={state.sitioweb} placeholder="Sitio web" name="sitioweb" onChange={handleChange}/>
         <TextArea type="textarea" value={state.mensaje} cols="30" rows="10" placeholder="Mensaje" name="mensaje" onChange={handleChange}></TextArea>
       </Fields>
-      <Submit>
-        <input type="submit" value="Enviar"/>
-      </Submit>
+      <ButtonSubmit buttonText="Enviar" buttonwidth="80px"/>
+        {/* <input type="submit" value="Enviar"/> */}
+      {/* </Button> */}
     </FormContainer>
   )
 };

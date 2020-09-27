@@ -1,10 +1,9 @@
 import React from 'react';
-import Card from '../components/Card';
 import {colors, mixins } from '../styles/globalCss';
 import styled from 'styled-components';
 import Title from '../components/Title';
 import CardCircular from './CardCircular';
-import icono from '../img/icono_mas_40_x_40.png';
+import icono from '../img/icono_mas_100_x_100.png';
 
 
 const MisionContainer = styled.div`
