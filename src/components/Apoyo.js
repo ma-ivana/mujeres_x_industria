@@ -3,9 +3,9 @@ import {colors, mixins } from '../styles/globalCss';
 import styled from 'styled-components';
 import Title from '../components/Title';
 import CardRoundIconApoyo from '../components/CardRoundIconApoyo';
-import ahk from '../img/ahk_100_x_100.png';
-import ab from '../img/ab_100_x_100.png';
-import wise from '../img/wise_100_x_100.png';
+import ahk from '../img/ahk_300_x_300.png';
+import ab from '../img/ab_300_x_300.png';
+import wise from '../img/wise_300_x_300.png';
 
 const ApoyoContainer = styled.div`
   width: 100%;
@@ -21,6 +21,12 @@ const CardContainer = styled.div`
   box-sizing: border-box;
   height: auto;
   ${mixins.between_flex};
+
+  @media all and (max-width: 768px) {
+    flex-wrap: wrap;
+    margin-top: 55px;
+    ${mixins.column_flex_center};
+  }
   
 `
 

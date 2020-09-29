@@ -19,6 +19,20 @@ const CardTotal = styled.div`
     :hover {
       transform: scale(1.1);
     }
+
+    @media all and (max-width: 768px) and (min-width: 321px){
+      width: 270px;
+      height: 270px;
+      padding: 0;
+      margin-bottom: 15px;
+    }
+
+    @media all and (max-width: 320px) {
+      width: 230px;
+      height: 230px;
+      padding: 0;
+      margin-bottom: 15px;
+    }
 `
 
 const CardTitle = styled.div`
@@ -29,6 +43,18 @@ const CardTitle = styled.div`
   font-family: ${fonts.title};
   font-size: 32px;
   height: 50px;
+
+  @media all and (max-width: 768px) and (min-width: 321px){
+    margin: 2%;
+    font-size: 28px;
+    height: 30px;
+  }
+
+  @media all and (max-width: 320px) {
+    font-size: 23px;
+    height: 21px;
+    margin: 1%;
+  }
 `
 
 const CardIcon = styled.div`
@@ -41,6 +67,16 @@ const CardIcon = styled.div`
       width: 82%;
       height: auto;
     }
+
+  @media all and (max-width: 768px) and (min-width: 321px){
+    width: 70px;
+    height: 70px;
+  }
+
+  @media all and (max-width: 320px) {
+    width: 60px;
+    height: 60px;
+  }
 `
 const CardText = styled.div`
   color: white;
@@ -52,6 +88,17 @@ const CardText = styled.div`
     p {
       text-align: center;
     }
+  
+  @media all and (max-width: 768px) and (min-width: 321px) {
+    font-size: 18px;
+    height: 120px;
+  }
+
+  @media all and (max-width: 320px) {
+    font-size: 16px;
+    height: 110px;
+
+  }
 `
 
 const CardCircular = ({ cardColor, iconName, iconColor, cardTitle, cardContent }) => {

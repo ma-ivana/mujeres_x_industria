@@ -12,6 +12,12 @@ const MisionContainer = styled.div`
   width: 100%;
   margin: 95px 0;
   ${mixins.column_flex_center};
+
+  @media all and (max-width: 768px) {
+    width: 94%;
+    margin: 3%;
+    box-sizing: border-box;
+  }
 `
 
 const CardContainer = styled.div`
@@ -21,6 +27,12 @@ const CardContainer = styled.div`
   height: auto;
   ${mixins.between_flex};
   
+  @media all and (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
 `
 
 const Mision = () => {

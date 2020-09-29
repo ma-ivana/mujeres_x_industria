@@ -12,6 +12,12 @@ const ContactoContainer = styled.div`
   box-sizing: border-box;
   display: flex;
   justify-content: space-around;
+
+  @media all and (max-width: 768px) {
+    margin: 3%;
+    justify-content: center;
+    
+  }
 `
 
 const LeftDiv = styled.div`
@@ -25,6 +31,10 @@ const LeftDiv = styled.div`
       width: 640px;
       height: 540px;
     }    
+  
+  @media all and (max-width: 768px) {
+    display: none;
+  }
 `
 
 const RightDiv = styled.div`
@@ -34,7 +44,14 @@ const RightDiv = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;    
+  align-items: flex-start;  
+
+  @media all and (max-width: 768px) {
+    width: 97%;
+    margin-right: 3%;
+    background-color: white;
+  }
+    
 `
 const TitleContainer = styled.div`
   padding-left: 25px;
@@ -46,6 +63,12 @@ const TitleContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  @media all and (max-width: 768px) {
+    height: 700px;
+    width: 100%;
+    padding: 3%;
+  }
 `
 
 const Contacto = () => {

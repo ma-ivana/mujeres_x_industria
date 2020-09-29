@@ -17,6 +17,10 @@ const StyledButton = styled(Link)`
   padding-top: 6px;
   font-size: 15px;
   text-decoration: none;
+
+  @media all and (max-width: 768px) {
+    font-size: 12px;
+  }
 `
 
 const ButtonLink = ( {buttonText, buttonwidth, buttonRoute } ) => {

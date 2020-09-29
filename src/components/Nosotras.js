@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { mixins, colors, fonts } from '../styles/globalCss';
+import { mixins, colors, fonts, shadows } from '../styles/globalCss';
 import img_central from '../img/img_400_x_370.png';
 import Title from './Title';
 import Mision from './Mision';
@@ -13,6 +13,13 @@ const MainContainer = styled.section`
   box-sizing: border-box;
   ${mixins.between_flex};
   background-color: ${colors.borravino};
+
+  @media all and (max-width: 768px) {
+    margin: 10px;
+    height: auto;
+    flex-direction: column;
+    ${shadows.card_shadow};
+  }
 `
 const TextContainer = styled.div`
   width: 50%;
@@ -23,12 +30,26 @@ const TextContainer = styled.div`
   align-items: flex-start;
   justify-content: center;
   align-content: space-between;
+
+  @media all and (max-width: 768px) {
+    width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 3%;
+    align-items: center;
+    align-content: center;
+  }  
 `
 const Text = styled.p`
   margin-top: 35px;
   color: ${colors.blanco};
   font-family: ${fonts.banner};
   font-size: 21px;
+
+  @media all and (max-width: 768px) {
+    font-size: 15px;
+    text-align: center;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -41,6 +62,10 @@ const ImageContainer = styled.div`
       min-width: 100%;
       height: auto;
     }
+
+  @media all and (max-width: 768px) {
+    display: none;
+  }
 `
 
 const Nosotras = () => {

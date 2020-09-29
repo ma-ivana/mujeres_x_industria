@@ -6,6 +6,7 @@ import image2 from '../img/img2_380_250.png';
 import image3 from '../img/img3_380_250.png';
 import image4 from '../img/img4_380_250.png';
 import image5 from '../img/img5_380_250.png';
+
 import { ArrowIosBack } from '@styled-icons/evaicons-solid';
 import { ArrowIosForward } from '@styled-icons/evaicons-solid';
 import { colors, fonts, shadows, mixins } from '../styles/globalCss';
@@ -23,7 +24,7 @@ const StyledSlider = styled.div`
   overflow: hidden;
   margin: 0;
   ${shadows.card_shadow};
-  
+
   .slide {
     min-width: 100%;
     height: 90%;
@@ -32,7 +33,7 @@ const StyledSlider = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     .img_container {
       width: 50%;
       height: auto;
@@ -40,7 +41,7 @@ const StyledSlider = styled.div`
       img {
         min-width: 100%;
       }
-    } 
+    }
     .text_container {
       width: 60%;
       margin-right: 10%;
@@ -49,95 +50,29 @@ const StyledSlider = styled.div`
       font-family: ${fonts.title};
       color: ${colors.borravino};
       font-size: 24px;
-    }     
+    }
   }
 
-    @media screen and (max-width: 768px) and (min-width: 401px){
-    width: 100%;
-    height: 400px;
-    box-sizing: border-box;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    ${shadows.card_shadow};
+    @media all and (max-width: 768px) {
     
     .slide {
-      /* min-width: 100%; */
-      height: 90%;
-      transition: 0.5s;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      align-content: center;
+      flex-direction: column;
       
       .img_container {
-        display: none;
-        width: 0;
-        height: auto;
         margin-left: 0;
         img {
-          min-width: 0;
+          width: 80%;
         }
-      } 
+      }
       .text_container {
-        width: 70%;
-        margin-right: 0; 
+        margin-right: 0;
         padding: 0;
-        text-align: center;
-        font-family: ${fonts.title};
-        color: ${colors.borravino};
         font-size: 18px;
-      }     
+      }
     }
-    }
+    }   
 
-    @media screen and (max-width: 400px) {
-    width: 100%;
-    height: 400px;
-    box-sizing: border-box;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    margin: 0;
-    ${shadows.card_shadow};
-    
-    .slide {
-      /* min-width: 100%; */
-      height: 90%;
-      transition: 0.5s;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      
-      .img_container {
-        display: none;
-        width: 0;
-        height: auto;
-        margin-left: 0;
-        img {
-          min-width: 0;
-        }
-      } 
-      .text_container {
-        width: 70%;
-        margin-right: 0; 
-        padding: 0;
-        text-align: center;
-        font-family: ${fonts.title};
-        color: ${colors.borravino};
-        font-size: 18px;
-      }     
-    }
-    }
-  
   `
 
 const ButtonContainer = styled.div`
@@ -155,7 +90,7 @@ const ButtonLeft = styled.button`
   border: none;
   outline: none;
 
-  @media screen and (max-width: 450px) {
+  @media all and (max-width: 768px) {
     width: 75px;
     height: 120px;
   }
@@ -172,7 +107,7 @@ const ButtonRight = styled.button`
   border: none;
   outline: none;
 
-  @media screen and (max-width: 450px) {
+  @media all and (max-width: 768px) {
     width: 75px;
     height: 120px;
   }
@@ -182,22 +117,32 @@ const ArrowLeft = styled(ArrowIosBack)`
   height: 50%;
   width: auto;
   color: #900d4f;
+
+  @media all and (max-width: 768px) {
+    width: 75px;
+    height: 120px;
+  }
 `
 
 const ArrowRight = styled(ArrowIosForward)`
   height: 50%;
   width: auto;
   color: #900d4f;
+
+  @media all and (max-width: 768px) {
+    width: 75px;
+    height: 120px;
+  }
 `
 
 const Slider = () => {
   const [ x, setX] = useState(0);
   let sliderArr = [
-  <ImgComp src={image1}/>, 
-  <ImgComp src={image2}/>, 
-  <ImgComp src={image3}/>, 
-  <ImgComp src={image4}/>, 
-  <ImgComp src={image5}/>]    
+  <ImgComp src={image1}/>,
+  <ImgComp src={image2}/>,
+  <ImgComp src={image3}/>,
+  <ImgComp src={image4}/>,
+  <ImgComp src={image5}/>]
   const goLeft = () => {
     x === 0 ? setX(-100 * (sliderArr.length - 1)) : setX(x + 100);
   }
@@ -223,7 +168,7 @@ const Slider = () => {
                 <ButtonLink buttonText={"Quiero ayudar"} buttonwidth={"110px"} buttonRoute={"/contacto"}/>
               </ButtonContainer>
             </div>
-            
+
           </div>
         )
       })}

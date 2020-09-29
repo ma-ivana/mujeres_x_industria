@@ -60,7 +60,7 @@ const Social = styled.div`
       transform: scale(1.2);
     }
 
-  @media (max-width: 768px) and (min-width: 431px) {
+  @media (max-width: 768px) and (min-width: 620px) {
     width: 30%;
     display: flex;
     flex-wrap: wrap;
@@ -88,7 +88,7 @@ const Social = styled.div`
     }
   }
 
-    @media (max-width: 430px) {
+    @media all and (max-width: 619px) {
       width: 70%;
       display: flex;
     /* flex-direction: column; */

@@ -12,6 +12,11 @@ const CardTotal = styled.div`
     :hover {
       transform: scale(1.1);
     }
+
+    @media all and (max-width: 768px) {
+    width: 80%;
+    margin-bottom: 65px;
+  }
 `
 
 const CardTitle = styled.div`
@@ -22,6 +27,11 @@ const CardTitle = styled.div`
   font-size: 21px;
   text-align: center;
   height: 20px;
+
+  @media all and (max-width: 768px) {
+    margin: -55px 10px 35px;
+    font-size: 18px;
+  }
 `
 
 const CardIcon = styled.div`
@@ -48,6 +58,11 @@ const CardText = styled.div`
     p {
       text-align: center;
     }
+
+    @media all and (max-width: 768px) {
+    font-size: 18px;
+    padding: 0 3%;
+  }
 `
 
 const CardRoundIconApoyo = ({ cardColor, iconName, iconColor, cardTitle, cardContent }) => {

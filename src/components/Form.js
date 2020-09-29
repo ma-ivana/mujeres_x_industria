@@ -13,6 +13,14 @@ const FormContainer = styled.form`
   margin-top: 25px;
   display: flex;
   justify-content: space-between;
+
+  @media all and (max-width: 768px) {
+    width: 90%;
+    flex-direction: column;
+    height: 500px;
+    
+        
+  }
 `
 const Fields = styled.div`
   width: 450px;
@@ -34,27 +42,19 @@ const Fields = styled.div`
           border: none;
           outline: none;
           border-bottom: 3px solid ${colors.gris_mas_claro};
-        }     
+        } 
+            
     }
-`
-// const Submit = styled.div`
-//   width: 80px;
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: flex-end;
 
-//     input {
-//       width: 80px;
-//       height: 30px;
-//       border-radius: 5%;
-//       border: none;
-//       background-color: ${colors.borravino};
-//       color: white;
-//       font-family: ${fonts.nav};
-//       font-weight: bold;
-//       ${shadows.card_shadow};
-//     }
-// `
+  @media all and (max-width: 768px) {
+    input {
+      width: 60%;
+    }
+  }
+
+
+`
+
 const TextArea = styled.textarea`
   width: 100%;
   height: auto;

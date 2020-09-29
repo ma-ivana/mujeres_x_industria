@@ -1,11 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { fonts } from '../styles/globalCss';
+import { fonts, mixins } from '../styles/globalCss';
 
 const TitleContainer = styled.div`
   width: 100%;
   height: auto;
   ${props => props.titleAlignment};
+
+  @media all and (max-width: 768px) {
+    ${mixins.column_flex_center};
+    width: 90%;
+  }
 `
 
 const TitleLine = styled.h2`
@@ -14,6 +19,10 @@ const TitleLine = styled.h2`
   font-size: 30px;
   margin-bottom: 0;
   padding-bottom: 0;
+
+  @media all and (max-width: 321px) {
+      font-size: 27px;
+    }
 `
 
 const HorizontalBar = styled.div`
@@ -22,6 +31,15 @@ const HorizontalBar = styled.div`
   background-color: ${props => props.barColor};
   margin-top: 0;
   padding-top: 0;
+
+    @media all and (max-width: 768px) and (min-width: 321px) {
+      width: 100%;
+    }
+
+    @media all and (max-width: 321px) {
+      width: 100%;
+      margin: 0 5%;
+    }
 `
 
 const Title = ({ titleAlignment, titleContent, titleColor, barColor }) => {

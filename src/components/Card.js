@@ -12,6 +12,12 @@ const CardTotal = styled.div`
     :hover {
       transform: scale(1.1);
     }
+
+    @media all and (max-width: 768px) {
+      width: 85%;
+      height: auto;
+      margin-bottom: 25px;
+    }
 `
 
 const CardTitle = styled.div`
@@ -21,6 +27,11 @@ const CardTitle = styled.div`
   font-family: ${fonts.title};
   font-size: 32px;
   height: 50px;
+
+  @media all and (max-width: 768px) {
+    font-size: 30px;
+    heigh: 37px;
+  }
 `
 
 const CardIcon = styled.div`
@@ -43,6 +54,10 @@ const CardText = styled.div`
     p {
       text-align: center;
     }
+
+  @media all and (max-width: 768px) {
+    font-size: 18px;
+  }
 `
 
 const Card = ({ cardColor, iconName, iconColor, cardTitle, cardContent }) => {

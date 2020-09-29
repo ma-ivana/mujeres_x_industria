@@ -15,7 +15,7 @@ const StyledBanner = styled.div`
   justify-content: center;
   box-sizing: border-box; 
 
-  @media (max-width: 430px) {
+  @media all and (max-width: 768px) {
     font-size: 23px;
     width: 100%;
     padding: 15px 5px;

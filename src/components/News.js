@@ -3,6 +3,7 @@ import Title from './Title';
 import { colors, mixins } from '../styles/globalCss';
 import TwitterContainer from './TwitterContainer';
 
+
 const News = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const News = () => {
       titleContent="NEWS"
       barColor={colors.gris_mas_claro}
     />
-      <TwitterContainer/>
+      <TwitterContainer/>    
     </>
   )
 }

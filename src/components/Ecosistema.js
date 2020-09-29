@@ -14,6 +14,12 @@ const EcosistemaContainer = styled.div`
   margin: 95px 0;
   ${mixins.column_flex_center};
   background-color: ${colors.gris_oscuro};
+
+  @media all and (max-width: 768px) {
+    margin-right: 15px;
+    margin-top: 15px;
+    box-sizing: border-box;
+  }
 `
 
 const CardContainer = styled.div`
@@ -23,6 +29,12 @@ const CardContainer = styled.div`
   box-sizing: border-box;
   height: auto;
   ${mixins.between_flex};
+
+  @media all and (max-width: 768px) {
+    flex-wrap: wrap;
+    margin-top: 55px;
+    ${mixins.column_flex_center_center};
+  }
   
 `
 
