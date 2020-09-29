@@ -8,11 +8,24 @@ const SectionContainer = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+
+  @media all and (max-width: 420px) {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
 `
 
 const Section = styled.section`
   width: 500px;
   margin: 25px;
+  
+
+  @media all and (max-width: 420px) {
+    width: 280px;
+    margin: 5px;    
+  }
   `
 
 const TwitterContainer = () => {

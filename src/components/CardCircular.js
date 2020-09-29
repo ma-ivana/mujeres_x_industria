@@ -29,7 +29,7 @@ const CardTotal = styled.div`
 
     @media all and (max-width: 320px) {
       width: 230px;
-      height: 230px;
+      height: 220px;
       padding: 0;
       margin-bottom: 15px;
     }
@@ -95,7 +95,7 @@ const CardText = styled.div`
   }
 
   @media all and (max-width: 320px) {
-    font-size: 16px;
+    font-size: 15px;
     height: 110px;
 
   }
